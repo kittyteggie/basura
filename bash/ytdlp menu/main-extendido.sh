@@ -1,5 +1,18 @@
 #!/bin/bash
 
+if ! command -v yt-dlp >/dev/null 2>&1; then
+  echo "yt-dlp no esta instalado, desearia instarlo?"
+  echo "[01] Si   [02] No"
+  read -p "Ecoja una opcion: " opcionYtDlp
+  if [ $opcionYtDlp = 01 ]; then
+    sudo apt install yt-dlp -y
+    echo "Listo! Ahora solo tiene que volver a ejecutar el programa"
+    exit 1
+  else
+    exit 1
+  fi
+fi
+
 read -p "Coloca el link: " link
 echo ""
 echo -e "\e[34mElije una opcion\e[0m"
