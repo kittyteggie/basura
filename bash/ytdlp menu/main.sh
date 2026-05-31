@@ -6,8 +6,6 @@ if ! command -v yt-dlp >/dev/null 2>&1; then
   read -p "Ecoja una opcion: " opcionYtDlp
   if [ $opcionYtDlp = 01 ]; then
     sudo apt install yt-dlp -y
-    echo "Listo! Ahora solo tiene que volver a ejecutar el programa"
-    exit 1
   else
     exit 1
   fi
