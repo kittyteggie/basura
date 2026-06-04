@@ -126,7 +126,7 @@ int main(){
 			}
 			else if(opcion2 == 2){
 				printf("Coloca el peso en libras: ");
-				printf("%f", libras);
+				scanf("%f", &libras);
 				kilogramos = libras / 2.20462;
 
 				printf("%.2f libras es igual a %.2f kilogramos\n", libras, kilogramos);
