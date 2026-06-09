@@ -8,7 +8,7 @@ fi
 archivo="$1"
 
 if [ ! -f "$archivo" ]; then
-  echo "Error: '$archivo' no existe o no es un archivo regular."
+  echo "Error: '$archivo' no existe"
   exit 1
 fi
 
