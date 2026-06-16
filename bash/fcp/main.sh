@@ -5,7 +5,7 @@ if ! command -v xclip >/dev/null 2>&1; then
   echo "[1] Si  [2] No"
   read -p "Escoja una opcion: " opcion
   if [ $opcion = 1 ]; then
-    sudo apt install xclip -y
+    sudo apt install xclip -y || exit 1
   else
     exit 1
   fi
@@ -16,6 +16,5 @@ if [ $# -ne 1 ]; then
   exit 1
 fi
 
-archivo="$1"
 xclip -sel clip <$1
 echo "$1 copiado al portapapeles correctamente"
